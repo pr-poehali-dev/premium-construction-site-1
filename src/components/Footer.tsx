@@ -101,10 +101,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Icon name="Phone" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
                 <div>
-                  <a href="tel:+74951234567" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors block">
-                    +7 (495) 123-45-67
+                  <a href="tel:+79051785769" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors block">
+                    +7 (905) 178-57-69
                   </a>
-                  <span className="font-body text-xs text-[hsl(30,10%,55%)]">Звонки и WhatsApp</span>
+                  <span className="font-body text-xs text-[hsl(30,10%,55%)]">Звонки, WhatsApp, MAX</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">

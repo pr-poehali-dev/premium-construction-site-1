@@ -42,9 +42,9 @@ export default function Contacts() {
                       <Icon name="Phone" size={16} className="text-[hsl(28,38%,42%)]" />
                     </div>
                     <div>
-                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Телефон / WhatsApp</p>
-                      <a href="tel:+74951234567" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        +7 (495) 123-45-67
+                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Телефон / WhatsApp / MAX</p>
+                      <a href="tel:+79051785769" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
+                        +7 (905) 178-57-69
                       </a>
                     </div>
                   </div>
@@ -98,12 +98,18 @@ export default function Contacts() {
               {/* Messengers */}
               <div className="pt-6 border-t border-[hsl(35,20%,86%)]">
                 <p className="font-body text-xs tracking-[0.18em] uppercase text-[hsl(28,30%,55%)] mb-4">Написать напрямую</p>
-                <div className="flex gap-3">
+                <div className="flex gap-3 flex-wrap">
                   <a
-                    href="https://wa.me/74951234567"
+                    href="https://wa.me/79051785769"
                     className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
                   >
                     <Icon name="MessageCircle" size={15} /> WhatsApp
+                  </a>
+                  <a
+                    href="max://call?phone=79051785769"
+                    className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
+                  >
+                    <Icon name="MessageSquare" size={15} /> MAX
                   </a>
                   <a
                     href="https://t.me/stroydom_msk"

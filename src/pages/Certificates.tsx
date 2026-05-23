@@ -98,7 +98,7 @@ export default function Certificates() {
             <Link to="/contacts" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
               Оставить заявку <Icon name="ArrowRight" size={15} />
             </Link>
-            <a href="tel:+74951234567" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors flex items-center gap-2 justify-center">
+            <a href="tel:+79051785769" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors flex items-center gap-2 justify-center">
               <Icon name="Phone" size={15} /> Позвонить
             </a>
           </div>

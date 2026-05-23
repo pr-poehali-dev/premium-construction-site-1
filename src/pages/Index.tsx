@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import ContactForm from "@/components/ContactForm";
+import LeadModal from "@/components/LeadModal";
 import { useReveal } from "@/hooks/useReveal";
 
 const IMG = {
@@ -63,7 +65,14 @@ const reviews = [
 ];
 
 export default function Index() {
+  const [leadOpen, setLeadOpen] = useState(false);
+  const [leadService, setLeadService] = useState("");
   useReveal();
+
+  const openLead = (service = "") => {
+    setLeadService(service);
+    setLeadOpen(true);
+  };
 
   return (
     <div className="bg-[hsl(40,30%,97%)] min-h-screen">
@@ -90,19 +99,25 @@ export default function Index() {
               12 лет опыта. Более 700 реализованных объектов.<br />
               Кровля, фундамент, фасад, бани, беседки, заборы.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.8s", opacity: 0, animationFillMode: "forwards" }}>
-              <Link
-                to="/contacts"
-                className="bg-[hsl(38,40%,97%)] text-[hsl(25,40%,22%)] font-body text-sm font-medium px-8 py-4 tracking-wide hover:bg-white transition-colors duration-200 text-center"
+            <div className="flex flex-col sm:flex-row gap-3 animate-fade-up flex-wrap" style={{ animationDelay: "0.8s", opacity: 0, animationFillMode: "forwards" }}>
+              <a
+                href="tel:+79051785769"
+                className="bg-[hsl(28,38%,32%)] text-[hsl(38,40%,97%)] font-body text-sm font-semibold px-7 py-4 tracking-wide hover:bg-[hsl(25,40%,22%)] transition-colors duration-200 text-center flex items-center justify-center gap-2"
+              >
+                <Icon name="Phone" size={16} /> Позвонить
+              </a>
+              <a
+                href="max://call?phone=79051785769"
+                className="bg-[hsl(38,40%,97%)] text-[hsl(25,40%,22%)] font-body text-sm font-semibold px-7 py-4 tracking-wide hover:bg-white transition-colors duration-200 text-center flex items-center justify-center gap-2"
+              >
+                <Icon name="MessageSquare" size={16} /> MAX
+              </a>
+              <button
+                onClick={() => openLead()}
+                className="border border-[hsl(38,30%,75%)] text-[hsl(38,35%,92%)] font-body text-sm font-medium px-7 py-4 tracking-wide hover:bg-white/10 transition-colors duration-200 text-center"
               >
                 Рассчитать стоимость
-              </Link>
-              <Link
-                to="/contacts"
-                className="border border-[hsl(38,30%,75%)] text-[hsl(38,35%,92%)] font-body text-sm font-medium px-8 py-4 tracking-wide hover:bg-white/10 transition-colors duration-200 text-center"
-              >
-                Получить консультацию
-              </Link>
+              </button>
             </div>
           </div>
 
@@ -141,25 +156,35 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[hsl(35,20%,85%)]">
-            {services.map((s, i) => (
-              <Link
-                to={s.href}
-                key={s.title}
-                className={`reveal reveal-delay-${Math.min((i % 4) + 1, 5)} bg-[hsl(40,30%,97%)] hover-lift group block overflow-hidden`}
-              >
-                <div className="aspect-[4/3] overflow-hidden bg-[hsl(38,25%,90%)]">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                </div>
-                <div className="p-6 lg:p-7">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Icon name={s.icon} size={11} className="text-[hsl(28,42%,32%)]" fallback="Home" />
-                    <span className="font-body text-[10px] tracking-[0.18em] uppercase text-[hsl(28,42%,32%)]">Услуга</span>
+            {services.map((s, i) => {
+              const serviceKey = s.href.split("/").pop() || "";
+              return (
+                <div
+                  key={s.title}
+                  className={`reveal reveal-delay-${Math.min((i % 4) + 1, 5)} bg-[hsl(40,30%,97%)] flex flex-col group overflow-hidden`}
+                >
+                  <Link to={s.href} className="block overflow-hidden bg-[hsl(38,25%,90%)] aspect-[16/7]">
+                    <img src={s.img} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  </Link>
+                  <div className="p-6 lg:p-7 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Icon name={s.icon} size={11} className="text-[hsl(28,42%,32%)]" fallback="Home" />
+                      <span className="font-body text-[10px] tracking-[0.18em] uppercase text-[hsl(28,42%,32%)]">Услуга</span>
+                    </div>
+                    <Link to={s.href}>
+                      <h3 className="font-display text-xl font-medium text-[hsl(25,35%,18%)] mb-2 hover:text-[hsl(28,42%,32%)] transition-colors">{s.title}</h3>
+                    </Link>
+                    <p className="font-body text-sm text-[hsl(30,15%,35%)] leading-relaxed flex-1 mb-5">{s.desc}</p>
+                    <button
+                      onClick={() => openLead(serviceKey)}
+                      className="w-full bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm font-medium py-3 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center justify-center gap-2"
+                    >
+                      Оставить заявку <Icon name="ArrowRight" size={14} />
+                    </button>
                   </div>
-                  <h3 className="font-display text-xl font-medium text-[hsl(25,35%,18%)] mb-2">{s.title}</h3>
-                  <p className="font-body text-sm text-[hsl(30,15%,35%)] leading-relaxed">{s.desc}</p>
                 </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -312,13 +337,13 @@ export default function Index() {
                 Оставьте заявку — и мы подготовим подробную смету и план работ бесплатно. Свяжемся в течение 30 минут.
               </p>
               <div className="flex flex-col gap-4">
-                <a href="tel:+74951234567" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
+                <a href="tel:+79051785769" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
                   <Icon name="Phone" size={16} className="text-[hsl(28,25%,60%)]" />
-                  <span className="font-body text-base">+7 (495) 123-45-67</span>
+                  <span className="font-body text-base">+7 (905) 178-57-69</span>
                 </a>
-                <a href="https://wa.me/74951234567" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
+                <a href="https://wa.me/79051785769" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
                   <Icon name="MessageCircle" size={16} className="text-[hsl(28,25%,60%)]" />
-                  <span className="font-body text-base">WhatsApp / Telegram</span>
+                  <span className="font-body text-base">WhatsApp / MAX</span>
                 </a>
               </div>
             </div>
@@ -329,6 +354,11 @@ export default function Index() {
         </div>
       </section>
 
+      <LeadModal
+        open={leadOpen}
+        onClose={() => setLeadOpen(false)}
+        defaultService={leadService}
+      />
     </div>
   );
 }

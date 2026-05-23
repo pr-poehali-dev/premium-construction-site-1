@@ -164,8 +164,8 @@ export default function About() {
           <h2 className="font-display text-3xl font-light text-[hsl(25,40%,22%)] mb-4">Готовы обсудить ваш проект?</h2>
           <p className="font-body text-sm text-[hsl(30,10%,45%)] mb-7">Звоните или пишите — отвечаем быстро</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+74951234567" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
-              <Icon name="Phone" size={15} /> +7 (495) 123-45-67
+            <a href="tel:+79051785769" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
+              <Icon name="Phone" size={15} /> +7 (905) 178-57-69
             </a>
             <Link to="/contacts" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors text-center">
               Написать нам

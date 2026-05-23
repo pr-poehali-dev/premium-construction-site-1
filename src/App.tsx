@@ -15,6 +15,7 @@ import WhyUs from "./pages/WhyUs";
 import Certificates from "./pages/Certificates";
 import Support from "./pages/Support";
 import Contacts from "./pages/Contacts";
+import Geography from "./pages/Geography";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ function Layout() {
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/geography" element={<Geography />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Услуги", href: "/services" },
   { label: "Наши работы", href: "/portfolio" },
   { label: "О нас", href: "/about" },
+  { label: "Где мы работаем", href: "/geography" },
   { label: "Отзывы", href: "/reviews" },
   { label: "Контакты", href: "/contacts" },
 ];
@@ -65,11 +66,11 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="tel:+74951234567"
+              href="tel:+79051785769"
               className="font-body text-sm font-medium text-[hsl(25,20%,25%)] hover:text-[hsl(28,38%,32%)] transition-colors flex items-center gap-2"
             >
               <Icon name="Phone" size={14} />
-              +7 (495) 123-45-67
+              +7 (905) 178-57-69
             </a>
             <Link
               to="/contacts"
@@ -104,11 +105,11 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+74951234567"
+              href="tel:+79051785769"
               className="font-body text-base font-medium text-[hsl(28,38%,32%)] flex items-center gap-2 mt-2"
             >
               <Icon name="Phone" size={16} />
-              +7 (495) 123-45-67
+              +7 (905) 178-57-69
             </a>
             <Link
               to="/contacts"
