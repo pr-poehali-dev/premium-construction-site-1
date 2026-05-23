@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/useReveal";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5adea300-6c1e-482c-9da3-7d04b8a4a030.jpg";
-const TEAM_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/88ebd906-de8f-454e-800f-6639c25ccb6c.jpg";
-const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5ff15261-59a4-4793-9d31-6ab79f6af360.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg";
+const TEAM_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/7779dcd3-eeba-4f9a-9c09-eb1b0efc3bef.jpg";
+const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8cbe30ce-612e-4751-b860-64eb3cd8a53c.jpg";
 
 const team = [
   { name: "Иван Кириллов", role: "Генеральный директор", exp: "18 лет в строительстве" },
@@ -14,11 +14,11 @@ const team = [
 ];
 
 const milestones = [
-  { year: "2012", event: "Основание компании СтройДом" },
-  { year: "2015", event: "50 завершённых объектов. Первые коттеджи за городом" },
-  { year: "2018", event: "Расширение: запуск коммерческого строительства" },
-  { year: "2021", event: "100+ построенных домов, выход в Краснодарский край" },
-  { year: "2024", event: "Более 200 объектов. Собственный проектный отдел" },
+  { year: "2012", event: "Основание компании СтройДом в Москве" },
+  { year: "2015", event: "150 завершённых объектов в Подмосковье" },
+  { year: "2018", event: "Расширение: запуск направления бани и беседки" },
+  { year: "2021", event: "400+ объектов, работа по всей Московской области" },
+  { year: "2024", event: "Более 700 объектов. Собственная проектная служба" },
 ];
 
 export default function About() {
@@ -45,15 +45,15 @@ export default function About() {
               <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)] leading-tight mb-6">
                 12 лет строим<br /><em>с душой</em>
               </h2>
-              <div className="space-y-4 font-body text-sm text-[hsl(30,10%,42%)] leading-relaxed">
+              <div className="space-y-4 font-body text-base text-[hsl(30,15%,28%)] leading-relaxed">
                 <p>
-                  Компания «СтройДом» основана в 2012 году в Краснодаре. Мы начинали с небольшой команды — три мастера и один прораб. Сегодня это слаженный коллектив из 60 специалистов, которые строят дома по всему Краснодарскому краю.
+                  Компания «СтройДом» основана в 2012 году в Москве. Мы начинали с небольшой команды — три мастера и один прораб. Сегодня это слаженный коллектив из 80 специалистов, которые работают по всей Московской области.
                 </p>
                 <p>
-                  Мы не гонимся за объёмом. Каждый проект для нас — это конкретная семья, которая доверила нам создание своего дома. Именно поэтому мы сопровождаем клиента на каждом этапе — от первого звонка до передачи ключей.
+                  Мы не гонимся за объёмом. Каждый объект для нас — это конкретная семья, которая доверила нам участок и свои планы. Именно поэтому мы сопровождаем клиента на каждом этапе — от первого звонка до сдачи работ.
                 </p>
                 <p>
-                  За 12 лет мы реализовали более 200 объектов: от уютных дач до крупных загородных коттеджей и коммерческих зданий. Ни одна смета не выросла без предупреждения. Ни один срок не был сдвинут без причины.
+                  За 12 лет мы выполнили более 700 объектов: кровли, фундаменты, фасады, бани, беседки, заборы и плиточные работы. Ни одна смета не выросла без предупреждения. Ни один срок не был сдвинут без причины.
                 </p>
               </div>
             </div>
@@ -131,13 +131,13 @@ export default function About() {
             <div className="reveal">
               <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,25%,60%)] mb-4">География</p>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(38,35%,94%)] leading-tight mb-6">
-                Работаем по<br /><em>всему краю</em>
+                Работаем по<br /><em>всей области</em>
               </h2>
-              <p className="font-body text-sm text-[hsl(30,15%,62%)] leading-relaxed mb-8">
-                Основной офис в Краснодаре. Работаем по всему Краснодарскому краю — Анапа, Горячий Ключ, Туапсе, Армавир, Кореновск и другие города.
+              <p className="font-body text-sm text-[hsl(30,15%,70%)] leading-relaxed mb-8">
+                Основной офис в Москве. Выезжаем по всей Московской области — Истра, Одинцово, Красногорск, Мытищи, Подольск, Звенигород и другие города в радиусе до 100 км.
               </p>
               <div className="grid grid-cols-2 gap-4">
-                {["Краснодар", "Анапа", "Горячий Ключ", "Армавир", "Туапсе", "Кореновск"].map((city) => (
+                {["Москва", "Истра", "Одинцово", "Красногорск", "Мытищи", "Подольск", "Звенигород", "Раменское"].map((city) => (
                   <div key={city} className="flex items-center gap-2">
                     <Icon name="MapPin" size={13} className="text-[hsl(28,30%,55%)]" />
                     <span className="font-body text-sm text-[hsl(38,25%,78%)]">{city}</span>
@@ -148,8 +148,8 @@ export default function About() {
             <div className="reveal mt-10 lg:mt-0 bg-[hsl(25,35%,24%)] p-8 flex items-center justify-center h-64">
               <div className="text-center">
                 <Icon name="Map" size={32} className="text-[hsl(28,25%,55%)] mx-auto mb-3" />
-                <p className="font-body text-sm text-[hsl(30,15%,55%)]">Краснодарский край</p>
-                <a href="https://yandex.ru/maps/?text=Краснодар" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[hsl(28,30%,55%)] hover:text-[hsl(38,30%,75%)] underline underline-offset-2 mt-2 block transition-colors">
+                <p className="font-body text-sm text-[hsl(30,15%,60%)]">Москва и Московская область</p>
+                <a href="https://yandex.ru/maps/?text=Москва" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[hsl(28,30%,60%)] hover:text-[hsl(38,30%,75%)] underline underline-offset-2 mt-2 block transition-colors">
                   Открыть на карте →
                 </a>
               </div>
@@ -164,8 +164,8 @@ export default function About() {
           <h2 className="font-display text-3xl font-light text-[hsl(25,40%,22%)] mb-4">Готовы обсудить ваш проект?</h2>
           <p className="font-body text-sm text-[hsl(30,10%,45%)] mb-7">Звоните или пишите — отвечаем быстро</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+78612345678" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
-              <Icon name="Phone" size={15} /> +7 (861) 234-56-78
+            <a href="tel:+74951234567" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
+              <Icon name="Phone" size={15} /> +7 (495) 123-45-67
             </a>
             <Link to="/contacts" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors text-center">
               Написать нам

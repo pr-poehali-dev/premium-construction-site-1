@@ -2,20 +2,20 @@ import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/useReveal";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5adea300-6c1e-482c-9da3-7d04b8a4a030.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg";
 
 const certificates = [
   { title: "СРО Допуск к строительным работам", issuer: "Саморегулируемая организация", year: "2014", icon: "Shield" },
   { title: "Лицензия на проектирование зданий", issuer: "Министерство строительства РФ", year: "2016", icon: "FileText" },
   { title: "Сертификат ISO 9001:2015", issuer: "Система менеджмента качества", year: "2019", icon: "Award" },
   { title: "Сертификат кровельного специалиста", issuer: "Национальный кровельный союз", year: "2017", icon: "Triangle" },
-  { title: "Диплом «Лучшая строительная компания»", issuer: "Строительная выставка Краснодар", year: "2022", icon: "Trophy" },
-  { title: "Благодарственное письмо", issuer: "Администрация Краснодарского края", year: "2023", icon: "Star" },
+  { title: "Диплом «Лучшая строительная компания»", issuer: "Строительная выставка Москва", year: "2022", icon: "Trophy" },
+  { title: "Благодарственное письмо", issuer: "Администрация Московской области", year: "2023", icon: "Star" },
 ];
 
 const achievements = [
   { num: "12", label: "лет на рынке" },
-  { num: "200+", label: "завершённых объектов" },
+  { num: "700+", label: "завершённых объектов" },
   { num: "6", label: "лицензий и сертификатов" },
   { num: "3", label: "отраслевые награды" },
 ];
@@ -98,7 +98,7 @@ export default function Certificates() {
             <Link to="/contacts" className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-8 py-4 hover:bg-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center">
               Оставить заявку <Icon name="ArrowRight" size={15} />
             </Link>
-            <a href="tel:+78612345678" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors flex items-center gap-2 justify-center">
+            <a href="tel:+74951234567" className="border border-[hsl(28,38%,42%)] text-[hsl(28,38%,38%)] font-body text-sm px-8 py-4 hover:bg-[hsl(38,30%,88%)] transition-colors flex items-center gap-2 justify-center">
               <Icon name="Phone" size={15} /> Позвонить
             </a>
           </div>

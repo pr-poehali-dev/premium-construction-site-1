@@ -69,12 +69,14 @@ export default function ContactForm({
           className={`w-full px-4 py-3.5 font-body text-sm border outline-none focus:border-[hsl(28,38%,42%)] transition-colors appearance-none ${inputBg}`}
         >
           <option value="">Выберите услугу</option>
-          <option value="houses">Строительство дома</option>
           <option value="roofing">Кровельные работы</option>
           <option value="foundation">Фундаментные работы</option>
           <option value="finishing">Отделочные работы</option>
-          <option value="renovation">Ремонт под ключ</option>
-          <option value="commercial">Коммерческое строительство</option>
+          <option value="facade">Фасадные работы</option>
+          <option value="fence">Заборы и ограждения</option>
+          <option value="paving">Плиточные работы</option>
+          <option value="gazebo">Беседки и террасы</option>
+          <option value="banya">Бани</option>
         </select>
         <textarea
           placeholder="Кратко опишите задачу (необязательно)"

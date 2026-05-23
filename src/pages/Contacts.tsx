@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 import ContactForm from "@/components/ContactForm";
 import { useReveal } from "@/hooks/useReveal";
 
-const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5ff15261-59a4-4793-9d31-6ab79f6af360.jpg";
+const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg";
 
 export default function Contacts() {
   useReveal();
@@ -43,8 +43,8 @@ export default function Contacts() {
                     </div>
                     <div>
                       <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Телефон / WhatsApp</p>
-                      <a href="tel:+78612345678" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        +7 (861) 234-56-78
+                      <a href="tel:+74951234567" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
+                        +7 (495) 123-45-67
                       </a>
                     </div>
                   </div>
@@ -54,8 +54,8 @@ export default function Contacts() {
                     </div>
                     <div>
                       <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Telegram</p>
-                      <a href="https://t.me/stroydom_krd" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        @stroydom_krd
+                      <a href="https://t.me/stroydom_msk" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
+                        @stroydom_msk
                       </a>
                     </div>
                   </div>
@@ -65,8 +65,8 @@ export default function Contacts() {
                     </div>
                     <div>
                       <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Email</p>
-                      <a href="mailto:info@stroydom-krd.ru" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        info@stroydom-krd.ru
+                      <a href="mailto:info@stroydom-msk.ru" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
+                        info@stroydom-msk.ru
                       </a>
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export default function Contacts() {
                     <div>
                       <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Адрес офиса</p>
                       <p className="font-body text-base font-medium text-[hsl(25,25%,20%)]">
-                        г. Краснодар, ул. Красная, 135
+                        г. Москва, ул. Тверская, 22
                       </p>
                     </div>
                   </div>
@@ -100,13 +100,13 @@ export default function Contacts() {
                 <p className="font-body text-xs tracking-[0.18em] uppercase text-[hsl(28,30%,55%)] mb-4">Написать напрямую</p>
                 <div className="flex gap-3">
                   <a
-                    href="https://wa.me/78612345678"
+                    href="https://wa.me/74951234567"
                     className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
                   >
                     <Icon name="MessageCircle" size={15} /> WhatsApp
                   </a>
                   <a
-                    href="https://t.me/stroydom_krd"
+                    href="https://t.me/stroydom_msk"
                     className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
                   >
                     <Icon name="Send" size={15} /> Telegram
@@ -121,9 +121,9 @@ export default function Contacts() {
             <div className="bg-[hsl(38,25%,91%)] h-72 border border-[hsl(35,20%,85%)] flex items-center justify-center">
               <div className="text-center">
                 <Icon name="MapPin" size={28} className="text-[hsl(28,30%,55%)] mx-auto mb-3" />
-                <p className="font-display text-xl text-[hsl(25,35%,22%)] mb-1">г. Краснодар, ул. Красная, 135</p>
+                <p className="font-display text-xl text-[hsl(25,35%,22%)] mb-1">г. Москва, ул. Тверская, 22</p>
                 <a
-                  href="https://yandex.ru/maps/?text=Краснодар+ул+Красная+135"
+                  href="https://yandex.ru/maps/?text=Москва+ул+Тверская+22"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-sm text-[hsl(28,38%,42%)] hover:text-[hsl(25,40%,22%)] underline underline-offset-2 transition-colors"

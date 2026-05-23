@@ -13,11 +13,11 @@ export default function Footer() {
                 СтройДом
               </span>
               <span className="font-body text-[10px] tracking-[0.2em] uppercase text-[hsl(28,25%,65%)] mt-1">
-                Краснодар
+                Москва
               </span>
             </div>
             <p className="font-body text-sm leading-relaxed text-[hsl(30,15%,65%)] max-w-xs">
-              12 лет строим дома, которым доверяют. Более 200 реализованных объектов в Краснодаре и Краснодарском крае.
+              12 лет работаем в строительстве. Более 700 реализованных объектов в Москве и Московской области.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
@@ -49,12 +49,14 @@ export default function Footer() {
             <h4 className="font-body text-xs tracking-[0.18em] uppercase text-[hsl(28,25%,65%)] mb-5">Услуги</h4>
             <ul className="space-y-3">
               {[
-                { label: "Строительство домов", href: "/services/houses" },
                 { label: "Кровельные работы", href: "/services/roofing" },
                 { label: "Фундамент", href: "/services/foundation" },
-                { label: "Отделка", href: "/services/finishing" },
-                { label: "Ремонт под ключ", href: "/services/renovation" },
-                { label: "Коммерческое строительство", href: "/services/commercial" },
+                { label: "Отделочные работы", href: "/services/finishing" },
+                { label: "Фасадные работы", href: "/services/facade" },
+                { label: "Заборы и ограждения", href: "/services/fence" },
+                { label: "Плиточные работы", href: "/services/paving" },
+                { label: "Беседки и террасы", href: "/services/gazebo" },
+                { label: "Бани", href: "/services/banya" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link
@@ -99,22 +101,22 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Icon name="Phone" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
                 <div>
-                  <a href="tel:+78612345678" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors block">
-                    +7 (861) 234-56-78
+                  <a href="tel:+74951234567" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors block">
+                    +7 (495) 123-45-67
                   </a>
                   <span className="font-body text-xs text-[hsl(30,10%,55%)]">Звонки и WhatsApp</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="Mail" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
-                <a href="mailto:info@stroydom-krd.ru" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors">
-                  info@stroydom-krd.ru
+                <a href="mailto:info@stroydom-msk.ru" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors">
+                  info@stroydom-msk.ru
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Icon name="MapPin" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
                 <span className="font-body text-sm text-[hsl(30,15%,65%)]">
-                  г. Краснодар, ул. Красная, 135
+                  г. Москва, ул. Тверская, 22
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -132,9 +134,9 @@ export default function Footer() {
         <div className="mt-12 rounded-sm overflow-hidden h-48 bg-[hsl(25,25%,24%)] flex items-center justify-center border border-[hsl(25,20%,28%)]">
           <div className="text-center">
             <Icon name="MapPin" size={24} className="text-[hsl(28,30%,55%)] mx-auto mb-2" />
-            <p className="font-body text-sm text-[hsl(30,15%,55%)]">г. Краснодар, ул. Красная, 135</p>
+            <p className="font-body text-sm text-[hsl(30,15%,55%)]">г. Москва, ул. Тверская, 22</p>
             <a
-              href="https://yandex.ru/maps/?text=Краснодар+ул+Красная+135"
+              href="https://yandex.ru/maps/?text=Москва+ул+Тверская+22"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body text-xs text-[hsl(28,30%,55%)] hover:text-[hsl(38,30%,75%)] transition-colors mt-1 block underline underline-offset-2"
@@ -149,7 +151,7 @@ export default function Footer() {
             © 2024 СтройДом. Все права защищены.
           </p>
           <p className="font-body text-xs text-[hsl(30,10%,50%)]">
-            Строительство домов в Краснодаре и Краснодарском крае
+            Строительные работы в Москве и Московской области
           </p>
         </div>
       </div>

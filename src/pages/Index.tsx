@@ -3,28 +3,38 @@ import Icon from "@/components/ui/icon";
 import ContactForm from "@/components/ContactForm";
 import { useReveal } from "@/hooks/useReveal";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5adea300-6c1e-482c-9da3-7d04b8a4a030.jpg";
-const TEAM_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/88ebd906-de8f-454e-800f-6639c25ccb6c.jpg";
-const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5ff15261-59a4-4793-9d31-6ab79f6af360.jpg";
+const IMG = {
+  hero: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg",
+  roofing: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8cbe30ce-612e-4751-b860-64eb3cd8a53c.jpg",
+  foundation: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/7779dcd3-eeba-4f9a-9c09-eb1b0efc3bef.jpg",
+  finishing: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/fd2ad54c-e8af-43f0-9cd1-eca823605af6.jpg",
+  facade: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/73097157-2617-4816-a2a6-10b159cc60c3.jpg",
+  fence: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/6d45dbd4-f15f-4a38-99ef-218d07804a53.jpg",
+  paving: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8826c6c4-46fe-4542-941f-24cb7a4bfbe8.jpg",
+  gazebo: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/ce255a0d-623c-420d-82bd-bfa39cb99c8f.jpg",
+  banya: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/27254a6c-9562-43b3-a982-d1f8e23cb3e3.jpg",
+};
 
 const services = [
-  { icon: "Home", title: "Строительство домов", desc: "Дома из кирпича, газобетона, дерева — от фундамента до ключа", href: "/services/houses" },
-  { icon: "Triangle", title: "Кровельные работы", desc: "Монтаж, ремонт и замена любых видов кровли", href: "/services/roofing" },
-  { icon: "Square", title: "Фундаментные работы", desc: "Ленточный, плитный, свайный фундамент под любой проект", href: "/services/foundation" },
-  { icon: "Brush", title: "Отделочные работы", desc: "Внутренняя и внешняя отделка под ключ", href: "/services/finishing" },
-  { icon: "Wrench", title: "Ремонт под ключ", desc: "Полный ремонт квартир, домов и коммерческих помещений", href: "/services/renovation" },
-  { icon: "Building2", title: "Коммерческое строительство", desc: "Склады, офисы, производственные и торговые объекты", href: "/services/commercial" },
+  { icon: "Triangle", title: "Кровельные работы", desc: "Монтаж, ремонт и замена любых видов кровли", href: "/services/roofing", img: IMG.roofing },
+  { icon: "Layers", title: "Фундаментные работы", desc: "Ленточный, плитный, свайный фундамент под любой проект", href: "/services/foundation", img: IMG.foundation },
+  { icon: "Brush", title: "Отделочные работы", desc: "Внешняя отделка фасадов и сопутствующие работы", href: "/services/finishing", img: IMG.finishing },
+  { icon: "Building2", title: "Фасадные работы", desc: "Вентилируемые фасады, штукатурка, облицовка", href: "/services/facade", img: IMG.facade },
+  { icon: "Fence", title: "Заборы и ограждения", desc: "Металлические, кирпичные, кованые, профнастил", href: "/services/fence", img: IMG.fence },
+  { icon: "Grid3x3", title: "Уличные плиточные работы", desc: "Тротуарная плитка, брусчатка, мощение дорожек", href: "/services/paving", img: IMG.paving },
+  { icon: "TreePine", title: "Беседки и террасы", desc: "Деревянные беседки, террасы, перголы под ключ", href: "/services/gazebo", img: IMG.gazebo },
+  { icon: "Flame", title: "Бани", desc: "Бани из бруса, бревна, каркасные — под ключ", href: "/services/banya", img: IMG.banya },
 ];
 
 const portfolio = [
-  { title: "Коттедж 280 м²", location: "Краснодар, Юбилейный", type: "Строительство под ключ", img: HERO_IMG },
-  { title: "Загородный дом 190 м²", location: "пос. Знаменский", type: "Строительство + отделка", img: INTERIOR_IMG },
-  { title: "Жилой дом 240 м²", location: "Краснодар, Гидростроителей", type: "Строительство под ключ", img: TEAM_IMG },
+  { title: "Кровля коттеджа 280 м²", location: "Истринский р-н", type: "Кровельные работы", img: IMG.roofing },
+  { title: "Баня из бревна 60 м²", location: "Одинцово", type: "Бани", img: IMG.banya },
+  { title: "Мощение участка 450 м²", location: "Красногорск", type: "Плиточные работы", img: IMG.paving },
 ];
 
 const advantages = [
   { num: "12", label: "лет опыта", icon: "Award" },
-  { num: "200+", label: "построенных объектов", icon: "Home" },
+  { num: "700+", label: "выполненных объектов", icon: "Home" },
   { num: "100%", label: "работа по договору", icon: "FileText" },
   { num: "5 лет", label: "гарантия на работы", icon: "Shield" },
   { num: "0₽", label: "скрытых платежей", icon: "BadgeCheck" },
@@ -34,20 +44,20 @@ const advantages = [
 const reviews = [
   {
     name: "Андрей Семёнов",
-    location: "Краснодар",
-    text: "Строили дом 220 м² под ключ. Всё от проекта до сдачи — за 8 месяцев. Качество на уровне, смета не менялась. Теперь рекомендуем всем знакомым.",
+    location: "Истра",
+    text: "Делали кровлю на коттедж — металлочерепица. Всё от замеров до сдачи — за 3 недели. Качество на уровне, смета не менялась. Теперь рекомендуем всем знакомым.",
     year: "2024",
   },
   {
     name: "Татьяна Ковалёва",
-    location: "Горячий Ключ",
-    text: "Делали кровлю и отделку фасада. Мастера аккуратные, работали быстро, убрали за собой. Осталась очень довольна результатом.",
+    location: "Одинцово",
+    text: "Строили баню из бревна 50 м². Мастера аккуратные, работали быстро, убрали за собой. Осталась очень довольна результатом — всё точно по проекту.",
     year: "2023",
   },
   {
     name: "Дмитрий Волков",
-    location: "Краснодар",
-    text: "Капитальный ремонт квартиры под ключ. Прораб всегда был на связи, объяснял каждый этап. Результатом доволен — сделали качественно и в срок.",
+    location: "Красногорск",
+    text: "Заказывал мощение участка тротуарной плиткой плюс забор из профнастила. Прораб всегда был на связи, объяснял каждый этап. Сделали качественно и в срок.",
     year: "2024",
   },
 ];
@@ -61,8 +71,8 @@ export default function Index() {
       {/* HERO */}
       <section className="relative h-screen min-h-[640px] max-h-[900px] overflow-hidden grain-overlay">
         <img
-          src={HERO_IMG}
-          alt="Строительство домов в Краснодаре"
+          src={IMG.hero}
+          alt="Строительные работы в Москве и Московской области"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.55) saturate(0.85)" }}
         />
@@ -70,15 +80,15 @@ export default function Index() {
         <div className="relative h-full flex flex-col justify-end pb-20 lg:pb-28 container max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 3 }}>
           <div className="max-w-2xl">
             <p className="font-body text-xs tracking-[0.25em] uppercase text-[hsl(38,35%,80%)] mb-6 animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
-              Краснодар и Краснодарский край
+              Москва и Московская область
             </p>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.05] mb-6 animate-fade-up" style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}>
-              Строительство домов<br />
-              <em className="font-normal">и ремонт под ключ</em>
+              Строительные работы<br />
+              <em className="font-normal">для загородного дома</em>
             </h1>
             <p className="font-body text-base lg:text-lg text-[hsl(38,25%,82%)] leading-relaxed mb-10 animate-fade-up" style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}>
-              12 лет опыта. Более 200 реализованных объектов.<br />
-              Строим дома, которым доверяют.
+              12 лет опыта. Более 700 реализованных объектов.<br />
+              Кровля, фундамент, фасад, бани, беседки, заборы.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: "0.8s", opacity: 0, animationFillMode: "forwards" }}>
               <Link
@@ -100,7 +110,7 @@ export default function Index() {
           <div className="mt-14 flex items-center gap-10 border-t border-white/15 pt-8 animate-fade-up" style={{ animationDelay: "1s", opacity: 0, animationFillMode: "forwards" }}>
             {[
               { num: "12", label: "лет опыта" },
-              { num: "200+", label: "объектов" },
+              { num: "700+", label: "объектов" },
               { num: "5 лет", label: "гарантия" },
             ].map((s) => (
               <div key={s.num} className="flex flex-col">
@@ -117,34 +127,36 @@ export default function Index() {
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
             <div className="reveal">
-              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,30%,55%)] mb-3">Что мы делаем</p>
+              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,42%,32%)] mb-3">Что мы делаем</p>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)] leading-tight">
                 Полный спектр<br /><em>строительных услуг</em>
               </h2>
             </div>
             <Link
               to="/services"
-              className="reveal font-body text-sm text-[hsl(28,38%,38%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 self-end lg:self-auto"
+              className="reveal font-body text-sm text-[hsl(28,42%,28%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 self-end lg:self-auto"
             >
               Все услуги <Icon name="ArrowRight" size={15} />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[hsl(35,20%,85%)]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[hsl(35,20%,85%)]">
             {services.map((s, i) => (
               <Link
                 to={s.href}
                 key={s.title}
-                className={`reveal reveal-delay-${Math.min(i + 1, 5)} bg-[hsl(40,30%,97%)] p-8 lg:p-10 hover-lift group block`}
+                className={`reveal reveal-delay-${Math.min((i % 4) + 1, 5)} bg-[hsl(40,30%,97%)] hover-lift group block overflow-hidden`}
               >
-                <div className="w-10 h-10 bg-[hsl(38,30%,88%)] flex items-center justify-center mb-6 group-hover:bg-[hsl(28,38%,42%)] transition-colors duration-300">
-                  <Icon name={s.icon} size={18} className="text-[hsl(28,38%,38%)] group-hover:text-white transition-colors duration-300" fallback="Home" />
+                <div className="aspect-[4/3] overflow-hidden bg-[hsl(38,25%,90%)]">
+                  <img src={s.img} alt={s.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <h3 className="font-display text-xl font-medium text-[hsl(25,35%,20%)] mb-3">{s.title}</h3>
-                <p className="font-body text-sm text-[hsl(30,10%,48%)] leading-relaxed">{s.desc}</p>
-                <div className="flex items-center gap-2 mt-6 text-[hsl(28,30%,55%)] group-hover:text-[hsl(28,38%,32%)] transition-colors">
-                  <span className="font-body text-xs tracking-wide">Подробнее</span>
-                  <Icon name="ArrowRight" size={13} />
+                <div className="p-6 lg:p-7">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Icon name={s.icon} size={15} className="text-[hsl(28,42%,32%)]" fallback="Home" />
+                    <span className="font-body text-[10px] tracking-[0.18em] uppercase text-[hsl(28,42%,32%)]">Услуга</span>
+                  </div>
+                  <h3 className="font-display text-xl font-medium text-[hsl(25,35%,18%)] mb-2">{s.title}</h3>
+                  <p className="font-body text-sm text-[hsl(30,15%,35%)] leading-relaxed">{s.desc}</p>
                 </div>
               </Link>
             ))}
@@ -157,14 +169,14 @@ export default function Index() {
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
             <div className="reveal">
-              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,30%,55%)] mb-3">Реализованные проекты</p>
+              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,42%,32%)] mb-3">Реализованные проекты</p>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)] leading-tight">
                 Примеры<br /><em>наших работ</em>
               </h2>
             </div>
             <Link
               to="/portfolio"
-              className="reveal font-body text-sm text-[hsl(28,38%,38%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 self-end lg:self-auto"
+              className="reveal font-body text-sm text-[hsl(28,42%,28%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 self-end lg:self-auto"
             >
               Смотреть все проекты <Icon name="ArrowRight" size={15} />
             </Link>
@@ -185,9 +197,9 @@ export default function Index() {
                   />
                 </div>
                 <div className="mt-4 px-1">
-                  <p className="font-body text-xs text-[hsl(28,30%,55%)] tracking-wide">{p.type}</p>
-                  <h3 className="font-display text-xl font-medium text-[hsl(25,35%,20%)] mt-1">{p.title}</h3>
-                  <p className="font-body text-xs text-[hsl(30,10%,52%)] flex items-center gap-1 mt-1">
+                  <p className="font-body text-xs text-[hsl(28,42%,32%)] tracking-wide font-medium">{p.type}</p>
+                  <h3 className="font-display text-xl font-medium text-[hsl(25,35%,18%)] mt-1">{p.title}</h3>
+                  <p className="font-body text-xs text-[hsl(30,15%,38%)] flex items-center gap-1 mt-1">
                     <Icon name="MapPin" size={11} /> {p.location}
                   </p>
                 </div>
@@ -203,22 +215,22 @@ export default function Index() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
             <div>
               <div className="reveal">
-                <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,30%,55%)] mb-3">Наши преимущества</p>
+                <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,42%,32%)] mb-3">Наши преимущества</p>
                 <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)] leading-tight mb-6">
                   Почему выбирают<br /><em>именно нас</em>
                 </h2>
-                <p className="font-body text-sm lg:text-base text-[hsl(30,10%,45%)] leading-relaxed mb-10">
-                  За 12 лет мы выстроили репутацию на качестве и честности. Каждый объект — это не просто строительство, это долгосрочная ответственность перед клиентом.
+                <p className="font-body text-sm lg:text-base text-[hsl(30,15%,32%)] leading-relaxed mb-10">
+                  За 12 лет мы выстроили репутацию на качестве и честности. Каждый объект — это не просто работа, это долгосрочная ответственность перед клиентом.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-6">
                 {advantages.map((a, i) => (
                   <div key={a.label} className={`reveal reveal-delay-${Math.min(i + 1, 5)}`}>
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon name={a.icon} size={16} className="text-[hsl(28,38%,42%)]" fallback="Check" />
+                      <Icon name={a.icon} size={16} className="text-[hsl(28,42%,32%)]" fallback="Check" />
                       <span className="font-display text-2xl font-medium text-[hsl(25,40%,22%)]">{a.num}</span>
                     </div>
-                    <p className="font-body text-sm text-[hsl(30,10%,48%)]">{a.label}</p>
+                    <p className="font-body text-sm text-[hsl(30,15%,35%)]">{a.label}</p>
                   </div>
                 ))}
               </div>
@@ -226,13 +238,13 @@ export default function Index() {
             <div className="reveal mt-12 lg:mt-0">
               <div className="relative">
                 <img
-                  src={TEAM_IMG}
+                  src={IMG.foundation}
                   alt="Наша команда"
                   className="w-full aspect-[4/5] object-cover"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-[hsl(28,38%,32%)] text-[hsl(38,40%,97%)] p-6 w-48">
-                  <p className="font-display text-4xl font-light">200+</p>
-                  <p className="font-body text-xs tracking-wide text-[hsl(38,25%,80%)] mt-1">реализованных объектов</p>
+                  <p className="font-display text-4xl font-light">700+</p>
+                  <p className="font-body text-xs tracking-wide text-[hsl(38,25%,80%)] mt-1">выполненных объектов</p>
                 </div>
               </div>
             </div>
@@ -244,7 +256,7 @@ export default function Index() {
       <section className="py-24 lg:py-32 bg-[hsl(38,25%,93%)]">
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="reveal text-center mb-14">
-            <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,30%,55%)] mb-3">Отзывы клиентов</p>
+            <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,42%,32%)] mb-3">Отзывы клиентов</p>
             <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)]">
               Нам доверяют
             </h2>
@@ -257,20 +269,20 @@ export default function Index() {
               >
                 <div className="flex gap-0.5 mb-5">
                   {[...Array(5)].map((_, j) => (
-                    <Icon key={j} name="Star" size={13} className="text-[hsl(38,80%,60%)]" />
+                    <Icon key={j} name="Star" size={13} className="text-[hsl(38,80%,55%)]" />
                   ))}
                 </div>
-                <p className="font-body text-sm text-[hsl(25,15%,35%)] leading-relaxed mb-6 italic">
+                <p className="font-body text-sm text-[hsl(25,20%,25%)] leading-relaxed mb-6 italic">
                   "{r.text}"
                 </p>
                 <div className="flex items-center justify-between border-t border-[hsl(35,20%,88%)] pt-5">
                   <div>
-                    <p className="font-body text-sm font-medium text-[hsl(25,25%,20%)]">{r.name}</p>
-                    <p className="font-body text-xs text-[hsl(30,10%,55%)] flex items-center gap-1 mt-0.5">
+                    <p className="font-body text-sm font-semibold text-[hsl(25,30%,15%)]">{r.name}</p>
+                    <p className="font-body text-xs text-[hsl(30,15%,40%)] flex items-center gap-1 mt-0.5">
                       <Icon name="MapPin" size={10} /> {r.location}
                     </p>
                   </div>
-                  <span className="font-body text-xs text-[hsl(30,10%,60%)]">{r.year}</span>
+                  <span className="font-body text-xs text-[hsl(30,15%,45%)]">{r.year}</span>
                 </div>
               </div>
             ))}
@@ -278,7 +290,7 @@ export default function Index() {
           <div className="reveal text-center mt-10">
             <Link
               to="/reviews"
-              className="font-body text-sm text-[hsl(28,38%,38%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center"
+              className="font-body text-sm text-[hsl(28,42%,28%)] hover:text-[hsl(25,40%,22%)] transition-colors flex items-center gap-2 justify-center"
             >
               Все отзывы <Icon name="ArrowRight" size={15} />
             </Link>
@@ -291,21 +303,21 @@ export default function Index() {
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-20 items-center">
             <div className="reveal mb-12 lg:mb-0">
-              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,25%,60%)] mb-4">Начнём?</p>
+              <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,25%,65%)] mb-4">Начнём?</p>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(38,35%,94%)] leading-tight mb-6">
                 Рассчитайте стоимость<br />
                 <em>вашего проекта</em>
               </h2>
-              <p className="font-body text-sm text-[hsl(30,15%,62%)] leading-relaxed mb-8">
+              <p className="font-body text-sm text-[hsl(30,15%,70%)] leading-relaxed mb-8">
                 Оставьте заявку — и мы подготовим подробную смету и план работ бесплатно. Свяжемся в течение 30 минут.
               </p>
               <div className="flex flex-col gap-4">
-                <a href="tel:+78612345678" className="flex items-center gap-3 text-[hsl(38,30%,85%)] hover:text-white transition-colors">
-                  <Icon name="Phone" size={16} className="text-[hsl(28,25%,55%)]" />
-                  <span className="font-body text-base">+7 (861) 234-56-78</span>
+                <a href="tel:+74951234567" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
+                  <Icon name="Phone" size={16} className="text-[hsl(28,25%,60%)]" />
+                  <span className="font-body text-base">+7 (495) 123-45-67</span>
                 </a>
-                <a href="https://wa.me/78612345678" className="flex items-center gap-3 text-[hsl(38,30%,85%)] hover:text-white transition-colors">
-                  <Icon name="MessageCircle" size={16} className="text-[hsl(28,25%,55%)]" />
+                <a href="https://wa.me/74951234567" className="flex items-center gap-3 text-[hsl(38,30%,88%)] hover:text-white transition-colors">
+                  <Icon name="MessageCircle" size={16} className="text-[hsl(28,25%,60%)]" />
                   <span className="font-body text-base">WhatsApp / Telegram</span>
                 </a>
               </div>
