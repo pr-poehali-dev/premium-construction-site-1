@@ -52,20 +52,28 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`font-body text-sm tracking-wide transition-colors duration-200 hover:text-[hsl(28,38%,32%)] ${
-                  location.pathname === link.href
-                    ? "text-[hsl(28,38%,32%)] font-medium"
-                    : "text-[hsl(25,20%,35%)]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-7">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`relative font-body text-[15px] font-semibold tracking-tight transition-all duration-200 group ${
+                    isActive
+                      ? "text-[hsl(28,42%,28%)]"
+                      : "text-[hsl(25,40%,18%)] hover:text-[hsl(28,42%,28%)]"
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute left-0 right-0 -bottom-1.5 h-[2px] bg-[hsl(28,42%,32%)] transition-transform duration-300 origin-left ${
+                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA */}
