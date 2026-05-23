@@ -11,6 +11,11 @@ const navLinks = [
   { label: "Контакты", href: "/contacts" },
 ];
 
+const extraLinks = [
+  { label: "Поддержка клиентов", href: "/support" },
+  { label: "Сертификаты", href: "/certificates" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -80,9 +85,9 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile burger */}
+          {/* Burger — на десктопе показывает extraLinks, на мобиле — все ссылки */}
           <button
-            className="lg:hidden p-2 text-[hsl(25,20%,25%)]"
+            className="p-2 text-[hsl(25,20%,25%)] hover:text-[hsl(28,38%,32%)] transition-colors ml-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Меню"
           >
@@ -91,29 +96,48 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Menu drawer */}
       {menuOpen && (
-        <div className="lg:hidden bg-[hsl(40,35%,97%)] border-t border-[hsl(35,20%,85%)] px-6 py-6">
-          <nav className="flex flex-col gap-5">
-            {navLinks.map((link) => (
+        <div className="bg-[hsl(40,35%,97%)] border-t border-[hsl(35,20%,85%)] px-6 py-6">
+          <nav className="container max-w-7xl mx-auto flex flex-col gap-5">
+            {/* На мобильных показываем основные ссылки */}
+            <div className="lg:hidden flex flex-col gap-5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="font-body text-base text-[hsl(25,20%,25%)] hover:text-[hsl(28,38%,32%)] transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="border-t border-[hsl(35,20%,85%)] my-2" />
+            </div>
+
+            {/* Доп. ссылки — везде */}
+            {extraLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className="font-body text-base text-[hsl(25,20%,25%)] hover:text-[hsl(28,38%,32%)] transition-colors"
+                className="font-body text-base text-[hsl(25,20%,25%)] hover:text-[hsl(28,38%,32%)] transition-colors flex items-center gap-2"
               >
+                <Icon name="ArrowRight" size={14} className="text-[hsl(28,42%,32%)]" />
                 {link.label}
               </Link>
             ))}
+
+            <div className="border-t border-[hsl(35,20%,85%)] my-2 lg:hidden" />
+
             <a
               href="tel:+79051785769"
-              className="font-body text-base font-medium text-[hsl(28,38%,32%)] flex items-center gap-2 mt-2"
+              className="lg:hidden font-body text-base font-medium text-[hsl(28,38%,32%)] flex items-center gap-2"
             >
               <Icon name="Phone" size={16} />
               +7 (905) 178-57-69
             </a>
             <Link
               to="/contacts"
-              className="bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-5 py-3 text-center tracking-wide hover:bg-[hsl(25,40%,22%)] transition-colors"
+              className="lg:hidden bg-[hsl(28,38%,32%)] text-[hsl(40,35%,97%)] font-body text-sm px-5 py-3 text-center tracking-wide hover:bg-[hsl(25,40%,22%)] transition-colors"
             >
               Получить консультацию
             </Link>

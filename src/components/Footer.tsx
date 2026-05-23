@@ -21,25 +21,11 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
-                href="https://wa.me/78612345678"
-                className="w-9 h-9 bg-[hsl(25,30%,28%)] flex items-center justify-center hover:bg-[hsl(28,38%,42%)] transition-colors"
-                aria-label="WhatsApp"
+                href="max://call?phone=79051785769"
+                className="inline-flex items-center gap-2 bg-[hsl(28,38%,32%)] hover:bg-[hsl(28,42%,40%)] text-[hsl(38,40%,95%)] font-body text-sm font-medium px-4 h-9 transition-colors"
+                aria-label="MAX"
               >
-                <Icon name="MessageCircle" size={16} className="text-[hsl(38,40%,90%)]" />
-              </a>
-              <a
-                href="https://t.me/stroydom_krd"
-                className="w-9 h-9 bg-[hsl(25,30%,28%)] flex items-center justify-center hover:bg-[hsl(28,38%,42%)] transition-colors"
-                aria-label="Telegram"
-              >
-                <Icon name="Send" size={16} className="text-[hsl(38,40%,90%)]" />
-              </a>
-              <a
-                href="https://vk.com/stroydom_krd"
-                className="w-9 h-9 bg-[hsl(25,30%,28%)] flex items-center justify-center hover:bg-[hsl(28,38%,42%)] transition-colors"
-                aria-label="VKontakte"
-              >
-                <Icon name="Users" size={16} className="text-[hsl(38,40%,90%)]" />
+                <Icon name="MessageSquare" size={14} /> MAX
               </a>
             </div>
           </div>
@@ -108,15 +94,9 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Icon name="Mail" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
-                <a href="mailto:info@stroydom-msk.ru" className="font-body text-sm text-[hsl(38,30%,85%)] hover:text-white transition-colors">
-                  info@stroydom-msk.ru
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
                 <Icon name="MapPin" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
                 <span className="font-body text-sm text-[hsl(30,15%,65%)]">
-                  г. Москва, ул. Тверская, 22
+                  Москва, Пресненский район
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -130,21 +110,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Map placeholder */}
-        <div className="mt-12 rounded-sm overflow-hidden h-48 bg-[hsl(25,25%,24%)] flex items-center justify-center border border-[hsl(25,20%,28%)]">
-          <div className="text-center">
-            <Icon name="MapPin" size={24} className="text-[hsl(28,30%,55%)] mx-auto mb-2" />
-            <p className="font-body text-sm text-[hsl(30,15%,55%)]">г. Москва, ул. Тверская, 22</p>
-            <a
-              href="https://yandex.ru/maps/?text=Москва+ул+Тверская+22"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-xs text-[hsl(28,30%,55%)] hover:text-[hsl(38,30%,75%)] transition-colors mt-1 block underline underline-offset-2"
-            >
-              Открыть на Яндекс.Картах →
-            </a>
-          </div>
-        </div>
+
 
         <div className="border-t border-[hsl(25,20%,25%)] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-[hsl(30,10%,50%)]">

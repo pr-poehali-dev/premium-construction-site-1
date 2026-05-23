@@ -3,8 +3,8 @@ import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/useReveal";
 import ContactForm from "@/components/ContactForm";
 
-const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg";
-const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8cbe30ce-612e-4751-b860-64eb3cd8a53c.jpg";
+const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/15a63876-bf4c-453b-bee5-f4e384099a6b.jpg";
+const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/15a63876-bf4c-453b-bee5-f4e384099a6b.jpg";
 
 const stages = [
   {

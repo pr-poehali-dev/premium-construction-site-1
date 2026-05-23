@@ -48,36 +48,25 @@ export default function Contacts() {
                       </a>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[hsl(38,30%,88%)] flex items-center justify-center shrink-0">
-                      <Icon name="Send" size={16} className="text-[hsl(28,38%,42%)]" />
+                  <a href="max://call?phone=79051785769" className="flex items-start gap-4 group">
+                    <div className="w-10 h-10 bg-[hsl(38,30%,88%)] group-hover:bg-[hsl(28,38%,32%)] flex items-center justify-center shrink-0 transition-colors">
+                      <Icon name="MessageSquare" size={16} className="text-[hsl(28,38%,42%)] group-hover:text-white transition-colors" />
                     </div>
                     <div>
-                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Telegram</p>
-                      <a href="https://t.me/stroydom_msk" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        @stroydom_msk
-                      </a>
+                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">MAX</p>
+                      <span className="font-body text-base font-medium text-[hsl(25,25%,20%)] group-hover:text-[hsl(28,38%,42%)] transition-colors">
+                        Написать в MAX
+                      </span>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-[hsl(38,30%,88%)] flex items-center justify-center shrink-0">
-                      <Icon name="Mail" size={16} className="text-[hsl(28,38%,42%)]" />
-                    </div>
-                    <div>
-                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Email</p>
-                      <a href="mailto:info@stroydom-msk.ru" className="font-body text-base font-medium text-[hsl(25,25%,20%)] hover:text-[hsl(28,38%,42%)] transition-colors">
-                        info@stroydom-msk.ru
-                      </a>
-                    </div>
-                  </div>
+                  </a>
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 bg-[hsl(38,30%,88%)] flex items-center justify-center shrink-0">
                       <Icon name="MapPin" size={16} className="text-[hsl(28,38%,42%)]" />
                     </div>
                     <div>
-                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Адрес офиса</p>
+                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">Район</p>
                       <p className="font-body text-base font-medium text-[hsl(25,25%,20%)]">
-                        г. Москва, ул. Тверская, 22
+                        Москва, Пресненский район
                       </p>
                     </div>
                   </div>
@@ -100,45 +89,16 @@ export default function Contacts() {
                 <p className="font-body text-xs tracking-[0.18em] uppercase text-[hsl(28,30%,55%)] mb-4">Написать напрямую</p>
                 <div className="flex gap-3 flex-wrap">
                   <a
-                    href="https://wa.me/79051785769"
-                    className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
-                  >
-                    <Icon name="MessageCircle" size={15} /> WhatsApp
-                  </a>
-                  <a
                     href="max://call?phone=79051785769"
-                    className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
+                    className="flex items-center gap-2 bg-[hsl(28,38%,32%)] hover:bg-[hsl(25,40%,22%)] text-[hsl(38,40%,97%)] font-body text-sm font-medium px-5 py-3 transition-colors"
                   >
-                    <Icon name="MessageSquare" size={15} /> MAX
-                  </a>
-                  <a
-                    href="https://t.me/stroydom_msk"
-                    className="flex items-center gap-2 bg-[hsl(38,30%,88%)] hover:bg-[hsl(28,38%,32%)] text-[hsl(25,25%,22%)] hover:text-[hsl(38,40%,97%)] font-body text-sm px-5 py-3 transition-colors"
-                  >
-                    <Icon name="Send" size={15} /> Telegram
+                    <Icon name="MessageSquare" size={15} /> Написать в MAX
                   </a>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Map */}
-          <div className="reveal mt-14">
-            <div className="bg-[hsl(38,25%,91%)] h-72 border border-[hsl(35,20%,85%)] flex items-center justify-center">
-              <div className="text-center">
-                <Icon name="MapPin" size={28} className="text-[hsl(28,30%,55%)] mx-auto mb-3" />
-                <p className="font-display text-xl text-[hsl(25,35%,22%)] mb-1">г. Москва, ул. Тверская, 22</p>
-                <a
-                  href="https://yandex.ru/maps/?text=Москва+ул+Тверская+22"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-body text-sm text-[hsl(28,38%,42%)] hover:text-[hsl(25,40%,22%)] underline underline-offset-2 transition-colors"
-                >
-                  Открыть в Яндекс.Картах →
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

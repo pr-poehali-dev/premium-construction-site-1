@@ -3,15 +3,6 @@ import Icon from "@/components/ui/icon";
 import { useReveal } from "@/hooks/useReveal";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f0768fb3-be33-4885-8c10-3c0948ff1aa7.jpg";
-const TEAM_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/7779dcd3-eeba-4f9a-9c09-eb1b0efc3bef.jpg";
-const INTERIOR_IMG = "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8cbe30ce-612e-4751-b860-64eb3cd8a53c.jpg";
-
-const team = [
-  { name: "Иван Кириллов", role: "Генеральный директор", exp: "18 лет в строительстве" },
-  { name: "Алексей Петров", role: "Главный архитектор", exp: "Более 150 проектов" },
-  { name: "Сергей Новиков", role: "Руководитель отдела кровли", exp: "Сертифицированный специалист" },
-  { name: "Марина Соколова", role: "Проектный менеджер", exp: "Ведёт каждый объект лично" },
-];
 
 const milestones = [
   { year: "2012", event: "Основание компании СтройДом в Москве" },
@@ -28,7 +19,7 @@ export default function About() {
     <div className="bg-[hsl(40,30%,97%)] min-h-screen pt-20">
       {/* Header */}
       <div className="relative h-64 lg:h-80 overflow-hidden">
-        <img src={TEAM_IMG} alt="О компании" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
+        <img src={HERO_IMG} alt="О компании" className="absolute inset-0 w-full h-full object-cover" style={{ filter: "brightness(0.45) saturate(0.8)" }} />
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 to-transparent" />
         <div className="relative h-full flex flex-col justify-end pb-12 container max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 2 }}>
           <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(38,30%,72%)] mb-2">СтройДом</p>
@@ -92,34 +83,6 @@ export default function About() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 lg:py-28">
-        <div className="container max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="reveal text-center mb-14">
-            <p className="font-body text-xs tracking-[0.22em] uppercase text-[hsl(28,30%,55%)] mb-3">Люди</p>
-            <h2 className="font-display text-4xl lg:text-5xl font-light text-[hsl(25,40%,22%)]">
-              Наша команда
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <div key={member.name} className={`reveal reveal-delay-${i + 1}`}>
-                <div className="bg-[hsl(38,25%,91%)] aspect-[3/4] mb-4 overflow-hidden">
-                  <img
-                    src={i % 2 === 0 ? TEAM_IMG : INTERIOR_IMG}
-                    alt={member.name}
-                    className="w-full h-full object-cover opacity-90"
-                  />
-                </div>
-                <h3 className="font-display text-xl font-medium text-[hsl(25,35%,22%)]">{member.name}</h3>
-                <p className="font-body text-sm text-[hsl(28,38%,42%)] mt-0.5">{member.role}</p>
-                <p className="font-body text-xs text-[hsl(30,10%,52%)] mt-1">{member.exp}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

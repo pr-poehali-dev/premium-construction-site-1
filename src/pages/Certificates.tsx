@@ -77,16 +77,6 @@ export default function Certificates() {
             ))}
           </div>
 
-          {/* Document notice */}
-          <div className="reveal mt-12 bg-[hsl(38,30%,92%)] border border-[hsl(35,20%,85%)] p-6 flex items-start gap-4">
-            <Icon name="Info" size={18} className="text-[hsl(28,38%,42%)] shrink-0 mt-0.5" />
-            <div>
-              <p className="font-body text-sm font-medium text-[hsl(25,30%,25%)] mb-1">Оригиналы документов</p>
-              <p className="font-body text-xs text-[hsl(30,10%,45%)] leading-relaxed">
-                Все оригиналы лицензий и сертификатов доступны для ознакомления в нашем офисе. Также можем прислать скан-копии по запросу — просто свяжитесь с нами.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

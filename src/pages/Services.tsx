@@ -112,12 +112,12 @@ export default function Services() {
             <div
               key={s.id}
               id={s.id}
-              className={`reveal lg:grid lg:grid-cols-2 lg:gap-16 items-center ${i % 2 === 1 ? "lg:[direction:rtl]" : ""}`}
+              className={`reveal lg:grid lg:grid-cols-12 lg:gap-12 items-center ${i % 2 === 1 ? "lg:[direction:rtl]" : ""}`}
             >
-              <div className={i % 2 === 1 ? "lg:[direction:ltr]" : ""}>
-                <img src={s.img} alt={s.title} className="w-full aspect-[4/3] object-cover" />
+              <div className={`lg:col-span-4 ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
+                <img src={s.img} alt={s.title} className="w-full aspect-[4/3] object-cover max-w-sm mx-auto lg:max-w-none" />
               </div>
-              <div className={`mt-8 lg:mt-0 ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
+              <div className={`mt-8 lg:mt-0 lg:col-span-8 ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
                 <div className="w-8 h-8 bg-[hsl(38,30%,88%)] flex items-center justify-center mb-6">
                   <Icon name={s.icon} size={13} className="text-[hsl(28,42%,32%)]" fallback="Home" />
                 </div>
