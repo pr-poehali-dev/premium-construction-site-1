@@ -9,10 +9,10 @@ const IMG = {
   foundation: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/7779dcd3-eeba-4f9a-9c09-eb1b0efc3bef.jpg",
   finishing: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/fd2ad54c-e8af-43f0-9cd1-eca823605af6.jpg",
   facade: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/73097157-2617-4816-a2a6-10b159cc60c3.jpg",
-  fence: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/6d45dbd4-f15f-4a38-99ef-218d07804a53.jpg",
+  fence: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/5f0bcd01-60b3-4f52-abc2-6fa4b01904a5.jpg",
   paving: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/8826c6c4-46fe-4542-941f-24cb7a4bfbe8.jpg",
-  gazebo: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/ce255a0d-623c-420d-82bd-bfa39cb99c8f.jpg",
-  banya: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/27254a6c-9562-43b3-a982-d1f8e23cb3e3.jpg",
+  gazebo: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f7e40318-a5d3-49d3-8622-3bcd2e996e6e.jpg",
+  banya: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/fbdf1b16-d369-498c-9d04-193c2a9f0bcf.jpg",
 };
 
 const services = [
@@ -118,8 +118,8 @@ export default function Services() {
                 <img src={s.img} alt={s.title} className="w-full aspect-[4/3] object-cover" />
               </div>
               <div className={`mt-8 lg:mt-0 ${i % 2 === 1 ? "lg:[direction:ltr]" : ""}`}>
-                <div className="w-10 h-10 bg-[hsl(38,30%,88%)] flex items-center justify-center mb-6">
-                  <Icon name={s.icon} size={18} className="text-[hsl(28,42%,32%)]" fallback="Home" />
+                <div className="w-8 h-8 bg-[hsl(38,30%,88%)] flex items-center justify-center mb-6">
+                  <Icon name={s.icon} size={13} className="text-[hsl(28,42%,32%)]" fallback="Home" />
                 </div>
                 <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
                   <h2 className="font-display text-3xl lg:text-4xl font-light text-[hsl(25,40%,22%)]">{s.title}</h2>
