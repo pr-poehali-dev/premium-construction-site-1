@@ -76,9 +76,8 @@ export default function Contacts() {
                     </div>
                     <div>
                       <p className="font-body text-xs text-[hsl(30,10%,52%)] mb-0.5">График работы</p>
-                      <p className="font-body text-sm text-[hsl(25,25%,20%)]">Пн–Пт: 9:00 – 19:00</p>
-                      <p className="font-body text-sm text-[hsl(25,25%,20%)]">Сб: 10:00 – 16:00</p>
-                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mt-0.5">Вс — выходной</p>
+                      <p className="font-body text-base font-semibold text-[hsl(25,25%,20%)]">Круглосуточно</p>
+                      <p className="font-body text-xs text-[hsl(30,10%,52%)] mt-0.5">Без выходных, 24/7</p>
                     </div>
                   </div>
                 </div>

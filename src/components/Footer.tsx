@@ -102,8 +102,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Icon name="Clock" size={15} className="text-[hsl(28,30%,55%)] mt-0.5 shrink-0" />
                 <div>
-                  <span className="font-body text-sm text-[hsl(30,15%,65%)] block">Пн–Пт: 9:00 – 19:00</span>
-                  <span className="font-body text-sm text-[hsl(30,15%,65%)] block">Сб: 10:00 – 16:00</span>
+                  <span className="font-body text-sm text-[hsl(30,15%,65%)] block">Работаем круглосуточно</span>
+                  <span className="font-body text-xs text-[hsl(30,10%,55%)] block mt-0.5">Без выходных, 24/7</span>
                 </div>
               </li>
             </ul>

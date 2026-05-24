@@ -78,7 +78,7 @@ export default function Index() {
     <div className="bg-[hsl(40,30%,97%)] min-h-screen">
 
       {/* HERO */}
-      <section className="relative h-screen min-h-[640px] max-h-[900px] overflow-hidden grain-overlay">
+      <section className="relative min-h-[700px] lg:min-h-[760px] overflow-hidden grain-overlay pt-32 lg:pt-36 pb-16 lg:pb-24">
         <img
           src={IMG.hero}
           alt="Строительные работы в Москве и Московской области"
@@ -86,16 +86,19 @@ export default function Index() {
           style={{ filter: "brightness(0.55) saturate(0.85)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" style={{ zIndex: 2 }} />
-        <div className="relative h-full flex flex-col justify-end pb-20 lg:pb-28 container max-w-7xl mx-auto px-6 lg:px-8" style={{ zIndex: 3 }}>
-          <div className="max-w-2xl">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-[hsl(38,35%,80%)] mb-6 animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
+        <div className="relative container max-w-7xl mx-auto px-6 lg:px-8 flex flex-col justify-end min-h-[600px]" style={{ zIndex: 3 }}>
+          <div className="max-w-3xl">
+            <p className="font-body text-[11px] sm:text-xs tracking-[0.25em] uppercase text-[hsl(38,35%,82%)] font-semibold mb-5 animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
               Москва и Московская область
             </p>
-            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.05] mb-6 animate-fade-up" style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}>
+            <h1
+              className="font-display text-[34px] sm:text-5xl lg:text-6xl text-white leading-[1.08] mb-6 animate-fade-up"
+              style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
+            >
               Строительные работы<br />
-              <em className="font-normal">для загородного дома</em>
+              <span className="text-[hsl(38,55%,75%)]">для загородного дома</span>
             </h1>
-            <p className="font-body text-base lg:text-lg text-[hsl(38,25%,82%)] leading-relaxed mb-10 animate-fade-up" style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}>
+            <p className="font-body text-sm sm:text-base lg:text-lg text-[hsl(38,25%,85%)] leading-relaxed mb-10 max-w-xl animate-fade-up" style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}>
               12 лет опыта. Более 700 реализованных объектов.<br />
               Кровля, фундамент, фасад, бани, беседки, заборы.
             </p>
