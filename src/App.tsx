@@ -20,6 +20,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+declare global {
+  interface Window {
+    ym?: (...args: unknown[]) => void;
+  }
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -28,10 +34,24 @@ function ScrollToTop() {
   return null;
 }
 
+function MetrikaTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    if (typeof window.ym === "function") {
+      window.ym(109476692, "hit", window.location.href, {
+        referer: document.referrer,
+        title: document.title,
+      });
+    }
+  }, [location.pathname, location.search]);
+  return null;
+}
+
 function Layout() {
   return (
     <>
       <ScrollToTop />
+      <MetrikaTracker />
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
