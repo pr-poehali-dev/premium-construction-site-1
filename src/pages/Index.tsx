@@ -140,6 +140,27 @@ export default function Index() {
         </div>
       </section>
 
+      {/* PROMO BANNER */}
+      <section className="bg-[hsl(25,40%,22%)] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 14px)" }} />
+        <div className="relative container max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-7 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-7 text-center sm:text-left">
+          <div className="flex items-center gap-4">
+            <span className="flex-shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-full bg-[hsl(38,55%,60%)] text-[hsl(25,40%,18%)] animate-pulse">
+              <Icon name="BadgePercent" size={26} />
+            </span>
+            <p className="font-display text-lg sm:text-xl lg:text-2xl text-white leading-snug">
+              Только до конца июня — <span className="text-[hsl(38,60%,68%)] font-medium">скидка 10%</span> на все виды кровельных работ
+            </p>
+          </div>
+          <button
+            onClick={() => openLead("roofing")}
+            className="flex-shrink-0 bg-[hsl(38,55%,60%)] text-[hsl(25,40%,18%)] font-body text-sm font-semibold px-7 py-3.5 tracking-wide hover:bg-[hsl(38,60%,68%)] transition-colors duration-200 flex items-center gap-2"
+          >
+            Получить скидку <Icon name="ArrowRight" size={15} />
+          </button>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="py-24 lg:py-32 bg-[hsl(40,30%,97%)]">
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
