@@ -38,6 +38,7 @@ const IMG = {
   gaz1: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/f7e40318-a5d3-49d3-8622-3bcd2e996e6e.jpg",
   gaz2: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/045d5512-c9b7-4c0b-9574-9d37ccac8c49.jpg",
   gaz3: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/9db0ff12-cfbc-4689-88c0-01b64d3a798b.jpg",
+  ext1: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/028135ef-4160-4674-b4ae-f0d658974fb0.jpg",
   // Бани
   ban1: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/fbdf1b16-d369-498c-9d04-193c2a9f0bcf.jpg",
   ban2: "https://cdn.poehali.dev/projects/f8f21226-2b03-41f9-b5fb-e9d70673c027/files/d7877416-dd27-4a1c-8213-7d7d5b50765f.jpg",
@@ -76,7 +77,8 @@ const projects = [
   { title: "Подъездная дорожка 180 м²", location: "Химки", type: "Плитка", year: "2024", area: "180 м²", img: IMG.pav2 },
   { title: "Декоративное мощение 280 м²", location: "Серпухов", type: "Плитка", year: "2024", area: "280 м²", img: IMG.pav3 },
   { title: "Терраса из керамогранита", location: "Одинцово", type: "Плитка", year: "2023", area: "90 м²", img: IMG.pav4 },
-  // Беседки (3)
+  // Беседки (4)
+  { title: "Пристройка к дому 32 м²", location: "Красногорск", type: "Беседки", year: "2024", area: "32 м²", img: IMG.ext1 },
   { title: "Беседка с террасой 40 м²", location: "Звенигород", type: "Беседки", year: "2024", area: "40 м²", img: IMG.gaz1 },
   { title: "Беседка с мангалом 35 м²", location: "Истра", type: "Беседки", year: "2024", area: "35 м²", img: IMG.gaz2 },
   { title: "Терраса при доме 55 м²", location: "Пушкино", type: "Беседки", year: "2023", area: "55 м²", img: IMG.gaz3 },
