@@ -41,7 +41,7 @@ export default function Footer() {
                 { label: "Фасадные работы", href: "/services/facade" },
                 { label: "Заборы и ограждения", href: "/services/fence" },
                 { label: "Плиточные работы", href: "/services/paving" },
-                { label: "Беседки и террасы", href: "/services/gazebo" },
+                { label: "Пристройки, беседки и террасы", href: "/services/gazebo" },
                 { label: "Бани", href: "/services/banya" },
               ].map((item) => (
                 <li key={item.href}>

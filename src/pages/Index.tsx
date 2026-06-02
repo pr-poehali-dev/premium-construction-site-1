@@ -24,7 +24,7 @@ const services = [
   { icon: "Building2", title: "Фасадные работы", desc: "Вентилируемые фасады, штукатурка, облицовка", href: "/services/facade", img: IMG.facade },
   { icon: "Fence", title: "Заборы и ограждения", desc: "Металлические, кирпичные, кованые, профнастил", href: "/services/fence", img: IMG.fence },
   { icon: "Grid3x3", title: "Уличные плиточные работы", desc: "Тротуарная плитка, брусчатка, мощение дорожек", href: "/services/paving", img: IMG.paving },
-  { icon: "TreePine", title: "Беседки и террасы", desc: "Деревянные беседки, террасы, перголы под ключ", href: "/services/gazebo", img: IMG.gazebo },
+  { icon: "TreePine", title: "Пристройки, беседки и террасы", desc: "Пристройки к дому, деревянные беседки, террасы, перголы под ключ", href: "/services/gazebo", img: IMG.gazebo },
   { icon: "Flame", title: "Бани", desc: "Бани из бруса, бревна, каркасные — под ключ", href: "/services/banya", img: IMG.banya },
 ];
 

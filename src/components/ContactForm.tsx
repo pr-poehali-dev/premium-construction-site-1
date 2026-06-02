@@ -101,7 +101,7 @@ export default function ContactForm({
           <option value="facade">Фасадные работы</option>
           <option value="fence">Заборы и ограждения</option>
           <option value="paving">Плиточные работы</option>
-          <option value="gazebo">Беседки и террасы</option>
+          <option value="gazebo">Пристройки, беседки и террасы</option>
           <option value="banya">Бани</option>
         </select>
         <textarea
